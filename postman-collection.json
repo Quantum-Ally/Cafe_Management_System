@@ -13,10 +13,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "http://localhost:3000/",
+              "raw": "http://localhost:3100/",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "3100",
               "path": [""]
             }
           }
@@ -31,10 +31,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "http://localhost:3000/menu",
+              "raw": "http://localhost:3100/menu",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "3100",
               "path": ["menu"]
             }
           }
@@ -44,10 +44,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "http://localhost:3000/menu/1",
+              "raw": "http://localhost:3100/menu/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "3100",
               "path": ["menu", "1"]
             }
           }
@@ -62,10 +62,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "http://localhost:3000/customers/1",
+              "raw": "http://localhost:3100/customers/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "3100",
               "path": ["customers", "1"]
             }
           }
@@ -85,10 +85,10 @@
               "raw": "{\n  \"name\": \"Jane Doe\",\n  \"email\": \"jane@example.com\"\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/customers",
+              "raw": "http://localhost:3100/customers",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "3100",
               "path": ["customers"]
             }
           }
@@ -108,10 +108,10 @@
               "raw": "{\n  \"customerId\": 1,\n  \"points\": 7\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/customers/update-points",
+              "raw": "http://localhost:3100/customers/update-points",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "3100",
               "path": ["customers", "update-points"]
             }
           }
@@ -136,10 +136,10 @@
               "raw": "{\n  \"customerId\": 1,\n  \"items\": [\n    { \"menuItemId\": 1, \"quantity\": 1 },\n    { \"menuItemId\": 2, \"quantity\": 1 }\n  ]\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/orders",
+              "raw": "http://localhost:3100/orders",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "3100",
               "path": ["orders"]
             }
           }
@@ -149,10 +149,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "http://localhost:3000/orders/1",
+              "raw": "http://localhost:3100/orders/1",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "3100",
               "path": ["orders", "1"]
             }
           }
@@ -177,10 +177,10 @@
               "raw": "{\n  \"orderId\": 1,\n  \"amount\": 7.0\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/payments",
+              "raw": "http://localhost:3100/payments",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "3100",
               "path": ["payments"]
             }
           }
@@ -195,10 +195,10 @@
           "request": {
             "method": "GET",
             "url": {
-              "raw": "http://localhost:3000/inventory",
+              "raw": "http://localhost:3100/inventory",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "3100",
               "path": ["inventory"]
             }
           }
@@ -218,10 +218,10 @@
               "raw": "{\n  \"items\": [\n    { \"menuItemId\": 1, \"quantity\": 1 },\n    { \"menuItemId\": 2, \"quantity\": 1 }\n  ]\n}"
             },
             "url": {
-              "raw": "http://localhost:3000/inventory/update",
+              "raw": "http://localhost:3100/inventory/update",
               "protocol": "http",
               "host": ["localhost"],
-              "port": "3000",
+              "port": "3100",
               "path": ["inventory", "update"]
             }
           }

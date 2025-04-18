@@ -53,7 +53,15 @@ The system consists of six microservices:
    docker-compose up --build
    ```
 
-3. Access the API at `http://localhost:3000`
+3. Access the API at `http://localhost:3100` (Docker environment)
+
+When running in Docker, the services are mapped to the following ports:
+- API Gateway: http://localhost:3100
+- Menu Service: http://localhost:3101
+- Order Service: http://localhost:3102
+- Payment Service: http://localhost:3103
+- Inventory Service: http://localhost:3104
+- Customer Service: http://localhost:3105
 
 ### Running Locally for Development
 
