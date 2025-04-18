@@ -1,0 +1,83 @@
+version: '3'
+services:
+  mongodb:
+    image: mongo:latest
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - cafe-network
+
+  api-gateway:
+    build: ./api-gateway
+    container_name: api-gateway
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+      - menu-service
+      - order-service
+      - payment-service
+      - inventory-service
+      - customer-service
+    networks:
+      - cafe-network
+
+  menu-service:
+    build: ./menu-services
+    container_name: menu-service
+    ports:
+      - "3001:3001"
+    depends_on:
+      - mongodb
+    networks:
+      - cafe-network
+
+  order-service:
+    build: ./order-services
+    container_name: order-service
+    ports:
+      - "3002:3002"
+    depends_on:
+      - mongodb
+    networks:
+      - cafe-network
+
+  payment-service:
+    build: ./payment-services
+    container_name: payment-service
+    ports:
+      - "3003:3003"
+    depends_on:
+      - mongodb
+    networks:
+      - cafe-network
+
+  inventory-service:
+    build: ./inventory-services
+    container_name: inventory-service
+    ports:
+      - "3004:3004"
+    depends_on:
+      - mongodb
+    networks:
+      - cafe-network
+
+  customer-service:
+    build: ./customer-services
+    container_name: customer-service
+    ports:
+      - "3005:3005"
+    depends_on:
+      - mongodb
+    networks:
+      - cafe-network
+
+networks:
+  cafe-network:
+    driver: bridge
+
+volumes:
+  mongodb_data: 

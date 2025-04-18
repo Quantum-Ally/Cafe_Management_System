@@ -1,0 +1,28 @@
+{
+  "name": "cafe-management-system",
+  "version": "1.0.0",
+  "description": "A microservices-based cafe management system",
+  "scripts": {
+    "dev": "npx concurrently \"cd api-gateway && node index.js\" \"cd menu-services && node index.js\" \"cd order-services && node index.js\" \"cd payment-services && node index.js\" \"cd inventory-services && node index.js\" \"cd customer-services && node index.js\"",
+    "install-all": "npm run install-api && npm run install-menu && npm run install-order && npm run install-payment && npm run install-inventory && npm run install-customer",
+    "install-api": "cd api-gateway && npm install",
+    "install-menu": "cd menu-services && npm install",
+    "install-order": "cd order-services && npm install",
+    "install-payment": "cd payment-services && npm install",
+    "install-inventory": "cd inventory-services && npm install",
+    "install-customer": "cd customer-services && npm install",
+    "docker-build": "docker-compose build",
+    "docker-up": "docker-compose up",
+    "docker-down": "docker-compose down",
+    "seed": "node seed.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3"
+  }
+} 
