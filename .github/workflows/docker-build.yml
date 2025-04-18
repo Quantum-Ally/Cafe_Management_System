@@ -19,21 +19,21 @@ jobs:
     - name: Login to DockerHub
       uses: docker/login-action@v2
       with:
-        username: ${{ secrets.DOCKERHUB_USERNAME }}
+        username: abdulqudoos12
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     
     - name: Extract metadata (tags, labels) for Docker
       id: meta
       uses: docker/metadata-action@v4
       with:
-        images: ${{ secrets.DOCKERHUB_USERNAME }}/cafe-management-system
+        images: abdulqudoos12/cafe-management-system
         
     - name: Build and push API Gateway
       uses: docker/build-push-action@v4
       with:
         context: ./api-gateway
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/cafe-api-gateway:latest
+        tags: abdulqudoos12/cafe-api-gateway:latest
         labels: ${{ steps.meta.outputs.labels }}
         
     - name: Build and push Menu Service
@@ -41,7 +41,7 @@ jobs:
       with:
         context: ./menu-services
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/cafe-menu-service:latest
+        tags: abdulqudoos12/cafe-menu-service:latest
         labels: ${{ steps.meta.outputs.labels }}
         
     - name: Build and push Order Service
@@ -49,7 +49,7 @@ jobs:
       with:
         context: ./order-services
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/cafe-order-service:latest
+        tags: abdulqudoos12/cafe-order-service:latest
         labels: ${{ steps.meta.outputs.labels }}
         
     - name: Build and push Payment Service
@@ -57,7 +57,7 @@ jobs:
       with:
         context: ./payment-services
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/cafe-payment-service:latest
+        tags: abdulqudoos12/cafe-payment-service:latest
         labels: ${{ steps.meta.outputs.labels }}
         
     - name: Build and push Inventory Service
@@ -65,7 +65,7 @@ jobs:
       with:
         context: ./inventory-services
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/cafe-inventory-service:latest
+        tags: abdulqudoos12/cafe-inventory-service:latest
         labels: ${{ steps.meta.outputs.labels }}
         
     - name: Build and push Customer Service
@@ -73,5 +73,5 @@ jobs:
       with:
         context: ./customer-services
         push: true
-        tags: ${{ secrets.DOCKERHUB_USERNAME }}/cafe-customer-service:latest
+        tags: abdulqudoos12/cafe-customer-service:latest
         labels: ${{ steps.meta.outputs.labels }} 
